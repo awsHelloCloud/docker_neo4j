@@ -9,7 +9,7 @@ services:
     environment:
       - NEO4J_AUTH=neo4j/${NEO4J_PASSWD}
     volumes:
-      - ${NEO4J_DIR}/data:/data
-      - ${NEO4J_DIR}/logs:/logs
+      - ${NEO4J_DIR}/data:/var/lib/neo4j/data
+      - ${NEO4J_DIR}/logs:/var/lib/neo4j/logs
       - ${NEO4J_DIR}/import:/var/lib/neo4j/import
-      - ${NEO4J_DIR}/neo4j/plugins:/plugins 
+      - ${NEO4J_DIR}/neo4j/plugins:/var/lib/neo4j/plugins
