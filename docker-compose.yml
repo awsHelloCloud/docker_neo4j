@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWD}
+    volumes:
+      - ${NEO4J_DIR}/data:/data \
+      - ${NEO4J_DIR}/logs:/logs \
+      - ${NEO4J_DIR}/import:/var/lib/neo4j/import \
+      - ${NEO4J_DIR}/neo4j/plugins:/plugins 
