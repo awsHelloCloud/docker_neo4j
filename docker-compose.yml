@@ -6,9 +6,9 @@ services:
     container_name: 'neo4j'
     restart: always
     environment:
-      - NEO4J_AUTH=neo4j/test 
+      - NEO4J_AUTH=neo4j/${NEO4J_PASSWD}
     volumes:
-      - ./data/db:/data/db
+      - ${NEO4J_DIR}/db:/data/db
     ports:
       - 7474:7474
       - 7687:7687
