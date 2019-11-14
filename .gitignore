@@ -106,3 +106,4 @@ data
 logs
 import
 neo4j
+.env
